@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <Group
+      location = "group:Packages"
+      name = "Packages">
+      <FileRef
+         location = "group:Extensions">
+      </FileRef>
+      <FileRef
+         location = "group:Models">
+      </FileRef>
+      <FileRef
+         location = "group:Network">
+      </FileRef>
+      <FileRef
+         location = "group:Utility">
+      </FileRef>
+   </Group>
+   <FileRef
+      location = "container:DemoApp.xcodeproj">
+   </FileRef>
+</Workspace>
