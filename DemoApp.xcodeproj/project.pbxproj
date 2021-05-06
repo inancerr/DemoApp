@@ -24,6 +24,7 @@
 		0F8856142644929C00078ECD /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F8856132644929C00078ECD /* ListViewModel.swift */; };
 		0F885618264492AA00078ECD /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F885617264492AA00078ECD /* DetailView.swift */; };
 		0F88561C264492B300078ECD /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F88561B264492B300078ECD /* DetailViewModel.swift */; };
+		0F8856252644954300078ECD /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F8856242644954300078ECD /* ListCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,7 @@
 		0F8856132644929C00078ECD /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 		0F885617264492AA00078ECD /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		0F88561B264492B300078ECD /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		0F8856242644954300078ECD /* ListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,9 +140,9 @@
 		0F3E21292643217900CD0967 /* DemoApp */ = {
 			isa = PBXGroup;
 			children = (
+				0F885606264491AB00078ECD /* Screens */,
 				0F3E212A2643217900CD0967 /* AppDelegate.swift */,
 				0F3E212C2643217900CD0967 /* SceneDelegate.swift */,
-				0F885606264491AB00078ECD /* Screens */,
 				0F3E21362643217A00CD0967 /* Assets.xcassets */,
 				0F3E21382643217A00CD0967 /* LaunchScreen.storyboard */,
 				0F3E213B2643217A00CD0967 /* Info.plist */,
@@ -179,6 +181,7 @@
 		0F8856092644921100078ECD /* List */ = {
 			isa = PBXGroup;
 			children = (
+				0F8856242644954300078ECD /* ListCell.swift */,
 				0F88560F2644929100078ECD /* ListView.swift */,
 				0F3E212E2643217900CD0967 /* ListViewController.swift */,
 				0F8856132644929C00078ECD /* ListViewModel.swift */,
@@ -333,6 +336,7 @@
 				0F3E212F2643217900CD0967 /* ListViewController.swift in Sources */,
 				0F885618264492AA00078ECD /* DetailView.swift in Sources */,
 				0F3E212B2643217900CD0967 /* AppDelegate.swift in Sources */,
+				0F8856252644954300078ECD /* ListCell.swift in Sources */,
 				0F8856142644929C00078ECD /* ListViewModel.swift in Sources */,
 				0F88561C264492B300078ECD /* DetailViewModel.swift in Sources */,
 				0F8856102644929100078ECD /* ListView.swift in Sources */,

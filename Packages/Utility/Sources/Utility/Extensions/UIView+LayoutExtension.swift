@@ -3,6 +3,7 @@ import class UIKit.UIView
 import struct UIKit.CGFloat
 import class UIKit.NSLayoutConstraint
 import class UIKit.NSLayoutDimension
+import class UIKit.NSLayoutYAxisAnchor
 
 // MARK: - Align Edge
 public extension UIView {
@@ -97,7 +98,7 @@ public extension UIView {
         )
         return constraint
     }
-    
+        
     @discardableResult
     func alignTop(
         to view: UIView,
@@ -128,6 +129,19 @@ public extension UIView {
             : view.topAnchor
         
         let constraint = bottomAnchor.constraint(
+            equalTo: anchor,
+            constant: offset
+        )
+        return constraint
+    }
+    
+    @discardableResult
+    func alignTop(
+        to anchor: NSLayoutYAxisAnchor,
+        offset: CGFloat = .zero
+    ) -> NSLayoutConstraint {
+        translatesAutoresizingMaskIntoConstraints = false
+        let constraint = topAnchor.constraint(
             equalTo: anchor,
             constant: offset
         )

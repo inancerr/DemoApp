@@ -1,5 +1,5 @@
 //
-//  DetailView.swift
+//  ListCell.swift
 //  DemoApp
 //
 //  Created by İnanç Er on 7.05.2021.
@@ -7,15 +7,17 @@
 
 import class Foundation.NSCoder
 
-import class UIKit.UIView
+import struct UIKit.CGRect
+import class UIKit.UICollectionViewCell
 import class UIKit.UIImageView
+import class UIKit.UIScreen
 import class UIKit.UIImage
 import class UIKit.UILabel
 
 import func Utility.with
 import func Utility.vStack
 
-final class DetailView: UIView {
+final class ListCell: UICollectionViewCell {
     
     private let imageView = with(UIImageView()) {
         $0.contentMode = .scaleAspectFit
@@ -42,19 +44,23 @@ final class DetailView: UIView {
         nameLabel,
         priceLabel
     )
-
-    init() {
-        super.init(frame: .zero)
-        addSubview(stackView)
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        contentView.addSubview(stackView)
         
         [
-            stackView.alignTop(to: safeAreaLayoutGuide.topAnchor),
-            stackView.alignLeading(to: self, offset: 5),
-            stackView.alignTrailing(to: self, offset: 5),
-            nameLabel.alignHeight(25),
-            priceLabel.alignHeight(25)
+            stackView.alignFitEdges(insetedBy: 4),
+            [
+                nameLabel.alignHeight(25),
+                priceLabel.alignHeight(25)
+            ]
         ]
+        .flatMap { $0 }
         .activate()
+        
+        layer.shouldRasterize = true
+        layer.rasterizationScale = UIScreen.main.scale
     }
     
     required init?(coder: NSCoder) {

@@ -5,4 +5,26 @@
 //  Created by İnanç Er on 7.05.2021.
 //
 
-import Foundation
+import struct UIKit.IndexPath
+
+import struct Api.Product
+
+protocol DetailViewModelOutput: class {
+    
+}
+
+final class DetailViewModel {
+    
+    private(set) var datasource: [String] = []
+    
+    weak var output: DetailViewModelOutput?
+    
+    init() {
+        
+    }
+}
+
+// MARK: Events
+extension DetailViewModel {
+    
+}
