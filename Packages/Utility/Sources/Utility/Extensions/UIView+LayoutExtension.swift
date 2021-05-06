@@ -1,9 +1,8 @@
 
 import class UIKit.UIView
-import class UIKit.CGFloat
-import class UIKit.CGFloat
+import struct UIKit.CGFloat
 import class UIKit.NSLayoutConstraint
-import class UIKit.
+import class UIKit.NSLayoutDimension
 
 // MARK: - Align Edge
 public extension UIView {
@@ -136,48 +135,6 @@ public extension UIView {
     }
 }
 
-// MARK: - Centering
-public extension UIView {
-    @discardableResult
-    func center(in view: UIView, offset: CGPoint = .zero) -> [NSLayoutConstraint] {
-        let centerXConstraint = centerXWith(
-            centerXAnchor,
-            view.centerXAnchor,
-            constant: offset.x
-        )
-        let centerYConstraint = centerYWith(
-            centerYAnchor,
-            view.centerYAnchor,
-            constant: offset.y
-        )
-        let constraints: [NSLayoutConstraint] = [
-            centerXConstraint,
-            centerYConstraint
-        ]
-        return constraints
-    }
-    
-    @discardableResult
-    func centerX(in view: UIView, offset: CGFloat = .zero) -> NSLayoutConstraint {
-        let constraint = centerXWith(
-            centerXAnchor,
-            view.centerXAnchor,
-            constant: offset
-        )
-        return constraint
-    }
-    
-    @discardableResult
-    func centerY(in view: UIView, offset: CGFloat = .zero) -> NSLayoutConstraint {
-        let constraint = centerYWith(
-            centerYAnchor,
-            view.centerYAnchor,
-            constant: offset
-        )
-        return constraint
-    }
-}
-
 // MARK: - Sizing
 public extension UIView {
     @discardableResult
@@ -239,32 +196,6 @@ public extension UIView {
         translatesAutoresizingMaskIntoConstraints = false
         let constraint = dimension.constraint(
             equalToConstant: constant
-        )
-        return constraint
-    }
-    
-    func centerXWith(
-        _ referanceDimesion: NSLayoutXAxisAnchor,
-        _ relationDimension: NSLayoutXAxisAnchor,
-        constant: CGFloat
-    ) -> NSLayoutConstraint {
-        translatesAutoresizingMaskIntoConstraints = false
-        let constraint = referanceDimesion.constraint(
-            equalTo: relationDimension,
-            constant: constant
-        )
-        return constraint
-    }
-    
-    func centerYWith(
-        _ referanceDimesion: NSLayoutYAxisAnchor,
-        _ relationDimension: NSLayoutYAxisAnchor,
-        constant: CGFloat
-    ) -> NSLayoutConstraint {
-        translatesAutoresizingMaskIntoConstraints = false
-        let constraint = referanceDimesion.constraint(
-            equalTo: relationDimension,
-            constant: constant
         )
         return constraint
     }

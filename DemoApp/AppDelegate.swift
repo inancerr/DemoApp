@@ -14,10 +14,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-        let fetchRequest: NSFetchRequest<Product> = Product.fetchRequest()
-        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-        let result = try? context.fetch(fetchRequest)//it always returns an array but it may be empty. Fetch may throw if disc is unavailable or some other reasons
+//        // Override point for customization after application launch.
+//        let fetchRequest: NSFetchRequest<Product> = Product.fetchRequest()
+//        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+//        let result = try? context.fetch(fetchRequest)//it always returns an array but it may be empty. Fetch may throw if disc is unavailable or some other reasons
         return true
     }
 

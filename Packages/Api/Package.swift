@@ -4,27 +4,31 @@
 import PackageDescription
 
 let package = Package(
-    name: "Network",
+    name: "Api",
     platforms: [.iOS(.v14)],
     products: [
         .library(
-            name: "Network",
-            targets: ["Network"]),
+            name: "Api",
+            targets: ["Api"]),
+        .library(
+            name: "ApiDyn",
+            type: .dynamic,
+            targets: ["Api"])
     ],
     dependencies: [
-        .package(path: "../Packages/Utility"),
+        .package(path: "../Packages/Network"),
     ],
     targets: [
         .target(
-            name: "Network",
+            name: "Api",
             dependencies: [
                 .product(
-                    name: "UtilityDyn",
-                    package: "Utility"
+                    name: "Network",
+                    package: "Network"
                 )
             ]),
         .testTarget(
-            name: "NetworkTests",
-            dependencies: ["Network"]),
+            name: "ApiTests",
+            dependencies: ["Api"]),
     ]
 )

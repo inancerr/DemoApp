@@ -5,10 +5,7 @@
       location = "group:Packages"
       name = "Packages">
       <FileRef
-         location = "group:Extensions">
-      </FileRef>
-      <FileRef
-         location = "group:Models">
+         location = "group:Api">
       </FileRef>
       <FileRef
          location = "group:Network">
