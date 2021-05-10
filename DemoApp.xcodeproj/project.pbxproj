@@ -7,14 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0F14211D26448F210042B127 /* UtilityDyn in Frameworks */ = {isa = PBXBuildFile; productRef = 0F14211C26448F210042B127 /* UtilityDyn */; };
-		0F14211E26448F210042B127 /* UtilityDyn in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 0F14211C26448F210042B127 /* UtilityDyn */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		0F31E23F26499CF900431BEA /* EntitiesDyn in Frameworks */ = {isa = PBXBuildFile; productRef = 0F31E23E26499CF900431BEA /* EntitiesDyn */; };
-		0F31E24026499CF900431BEA /* EntitiesDyn in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 0F31E23E26499CF900431BEA /* EntitiesDyn */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		0F29F60A2649CC0D004320CD /* ProductApi in Frameworks */ = {isa = PBXBuildFile; productRef = 0F29F6092649CC0D004320CD /* ProductApi */; };
+		0F29F61A2649CCD6004320CD /* EntitiesDyn in Frameworks */ = {isa = PBXBuildFile; productRef = 0F29F6192649CCD6004320CD /* EntitiesDyn */; };
+		0F29F61B2649CCD6004320CD /* EntitiesDyn in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 0F29F6192649CCD6004320CD /* EntitiesDyn */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		0F3E212B2643217900CD0967 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3E212A2643217900CD0967 /* AppDelegate.swift */; };
 		0F3E212D2643217900CD0967 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3E212C2643217900CD0967 /* SceneDelegate.swift */; };
 		0F3E212F2643217900CD0967 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3E212E2643217900CD0967 /* ListViewController.swift */; };
-		0F3E21352643217900CD0967 /* DemoApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0F3E21332643217900CD0967 /* DemoApp.xcdatamodeld */; };
 		0F3E21372643217A00CD0967 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F3E21362643217A00CD0967 /* Assets.xcassets */; };
 		0F3E213A2643217A00CD0967 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F3E21382643217A00CD0967 /* LaunchScreen.storyboard */; };
 		0F3E21452643217A00CD0967 /* DemoAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3E21442643217A00CD0967 /* DemoAppTests.swift */; };
@@ -51,8 +49,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				0F14211E26448F210042B127 /* UtilityDyn in Embed Frameworks */,
-				0F31E24026499CF900431BEA /* EntitiesDyn in Embed Frameworks */,
+				0F29F61B2649CCD6004320CD /* EntitiesDyn in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -64,7 +61,6 @@
 		0F3E212A2643217900CD0967 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0F3E212C2643217900CD0967 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		0F3E212E2643217900CD0967 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
-		0F3E21342643217900CD0967 /* DemoApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DemoApp.xcdatamodel; sourceTree = "<group>"; };
 		0F3E21362643217A00CD0967 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0F3E21392643217A00CD0967 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0F3E213B2643217A00CD0967 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -87,8 +83,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0F14211D26448F210042B127 /* UtilityDyn in Frameworks */,
-				0F31E23F26499CF900431BEA /* EntitiesDyn in Frameworks */,
+				0F29F60A2649CC0D004320CD /* ProductApi in Frameworks */,
+				0F29F61A2649CCD6004320CD /* EntitiesDyn in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,7 +142,6 @@
 				0F3E21362643217A00CD0967 /* Assets.xcassets */,
 				0F3E21382643217A00CD0967 /* LaunchScreen.storyboard */,
 				0F3E213B2643217A00CD0967 /* Info.plist */,
-				0F3E21332643217900CD0967 /* DemoApp.xcdatamodeld */,
 			);
 			path = DemoApp;
 			sourceTree = "<group>";
@@ -217,8 +212,8 @@
 			);
 			name = DemoApp;
 			packageProductDependencies = (
-				0F14211C26448F210042B127 /* UtilityDyn */,
-				0F31E23E26499CF900431BEA /* EntitiesDyn */,
+				0F29F6092649CC0D004320CD /* ProductApi */,
+				0F29F6192649CCD6004320CD /* EntitiesDyn */,
 			);
 			productName = DemoApp;
 			productReference = 0F3E21272643217900CD0967 /* DemoApp.app */;
@@ -341,7 +336,6 @@
 				0F88561C264492B300078ECD /* DetailViewModel.swift in Sources */,
 				0F8856102644929100078ECD /* ListView.swift in Sources */,
 				0F88560C2644923600078ECD /* DetailViewController.swift in Sources */,
-				0F3E21352643217900CD0967 /* DemoApp.xcdatamodeld in Sources */,
 				0F3E212D2643217900CD0967 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -669,28 +663,15 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		0F14211C26448F210042B127 /* UtilityDyn */ = {
+		0F29F6092649CC0D004320CD /* ProductApi */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = UtilityDyn;
+			productName = ProductApi;
 		};
-		0F31E23E26499CF900431BEA /* EntitiesDyn */ = {
+		0F29F6192649CCD6004320CD /* EntitiesDyn */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = EntitiesDyn;
 		};
 /* End XCSwiftPackageProductDependency section */
-
-/* Begin XCVersionGroup section */
-		0F3E21332643217900CD0967 /* DemoApp.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				0F3E21342643217900CD0967 /* DemoApp.xcdatamodel */,
-			);
-			currentVersion = 0F3E21342643217900CD0967 /* DemoApp.xcdatamodel */;
-			path = DemoApp.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 0F3E211F2643217900CD0967 /* Project object */;
 }

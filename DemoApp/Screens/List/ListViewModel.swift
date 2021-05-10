@@ -5,9 +5,13 @@
 //  Created by İnanç Er on 7.05.2021.
 //
 
+import class Foundation.DispatchQueue
+
 import struct UIKit.IndexPath
 
 import struct Entities.Product
+
+import struct ProductApi.ProductAPI
 
 protocol ListViewModelOutput: class {
     func reloadList()
@@ -19,19 +23,27 @@ final class ListViewModel {
     private(set) var datasource: [Product] = []
     
     weak var output: ListViewModelOutput?
+    private let productAPI: ProductAPI
     
     // MARK: - Initialization
-    init() {
-
+    init(productAPI: ProductAPI) {
+        self.productAPI = productAPI
     }
 }
 
 // MARK: Events
 extension ListViewModel {
     func getProductList() {
-        DemoApp.getProductList { [weak self] (productList) in
-            self?.datasource = productList
-            self?.output?.reloadList()
+        productAPI.productList { [weak self] (result) in
+            switch result {
+            case .success(let productList):
+                self?.datasource = productList
+                DispatchQueue.main.async {
+                    self?.output?.reloadList()
+                }
+            case .failure(let err):
+                print(err)
+            }
         }
     }
     
@@ -42,35 +54,5 @@ extension ListViewModel {
     ) {
         let product = datasource[indexPath.row]
         output?.showProductDetail(product)
-    }
-}
-
-
-
-import Foundation
-
-func getProductList(_ completion: @escaping ([Product]) -> ()) {
-    let product = Product(
-        product_id: "1",
-        name: "Muz",
-        image: "https://s3-eu-west-1.amazonaws.com/developer-application-test/images/4.jpg",
-        price: 60
-    )
-    let products = [
-        product,
-        product,
-        product,
-        product,
-        product,
-        product,
-        product,
-        product,
-        product,
-        product,
-        product,
-        product
-    ]
-    DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-        completion(products)
     }
 }

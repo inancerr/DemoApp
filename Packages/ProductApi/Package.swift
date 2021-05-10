@@ -5,18 +5,29 @@ import PackageDescription
 
 let package = Package(
     name: "ProductApi",
+    platforms: [.iOS(.v14)],
     products: [
-        // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
             name: "ProductApi",
             targets: ["ProductApi"]),
     ],
     dependencies: [
+        .package(path: "../Packages/Entities"),
+        .package(path: "../Packages/Network")
     ],
     targets: [
         .target(
             name: "ProductApi",
-            dependencies: []),
+            dependencies: [
+                .product(
+                    name: "EntitiesDyn",
+                    package: "Entities"
+                ),
+                .product(
+                    name: "Network",
+                    package: "Network"
+                )
+            ]),
         .testTarget(
             name: "ProductApiTests",
             dependencies: ["ProductApi"]),

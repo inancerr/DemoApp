@@ -72,6 +72,6 @@ extension ListCell {
     func populate(with product: Product) {
         nameLabel.text = product.name
         priceLabel.text = product.price.formattedAsPrice
-        imageView.setImage(product.image)
+        imageView.setImage(product.imageURL)
     }
 }

@@ -32,7 +32,7 @@ class ListViewController: UIViewController {
     private let viewModel: ListViewModel
     
     // MARK: - Initialization
-    init(viewModel: ListViewModel) {
+    init(_ viewModel: ListViewModel) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
 
@@ -64,7 +64,13 @@ extension ListViewController: ListViewModelOutput {
     func showProductDetail(
         _ product: Product
     ) {
-        let controller = DetailViewController(viewModel: DetailViewModel())
+        let viewModel = DetailViewModel(
+            productAPI: .live
+        )
+        let controller = DetailViewController(
+            viewModel:viewModel,
+            productID: product.productID
+        )
         navigationController?.pushViewController(
             controller,
             animated: true

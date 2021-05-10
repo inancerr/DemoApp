@@ -21,7 +21,12 @@ let package = Package(
     targets: [
         .target(
             name: "Utility",
-            dependencies: []),
+            dependencies: [
+                .product(
+                    name: "EntitiesDyn",
+                    package: "Entities"
+                )
+            ]),
         .testTarget(
             name: "UtilityTests",
             dependencies: ["Utility"]),

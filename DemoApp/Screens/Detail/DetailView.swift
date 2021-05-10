@@ -15,26 +15,26 @@ import class UIKit.UILabel
 import func Utility.with
 import func Utility.vStack
 
+import struct Entities.Product
+
 final class DetailView: UIView {
     
     private let imageView = with(UIImageView()) {
         $0.contentMode = .scaleAspectFit
         $0.layer.masksToBounds = true
-        $0.image = UIImage(named: "product")
     }
     
     private let nameLabel = with(UILabel()) {
         $0.font = .systemFont(ofSize: 18, weight: .bold)
-        $0.text = "This is title"
     }
     
     private let detailLabel = with(UILabel()) {
         $0.font = .systemFont(ofSize: 16, weight: .medium)
-        $0.text = "This is description"
+        $0.numberOfLines = 0
     }
 
     private lazy var stackView = vStack(
-        space: 8
+        space: 16
     )(
         imageView,
         nameLabel,
@@ -47,15 +47,23 @@ final class DetailView: UIView {
         
         [
             stackView.alignTop(to: safeAreaLayoutGuide.topAnchor),
-            stackView.alignLeading(to: self, offset: 5),
-            stackView.alignTrailing(to: self, offset: 5),
-            nameLabel.alignHeight(25),
-            detailLabel.alignHeight(25)
+            stackView.alignLeading(to: self, offset: 15),
+            stackView.alignTrailing(to: self, offset: -15),
+            imageView.alignHeight(250)
         ]
         .activate()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+}
+
+// MARK: - Populate UI
+extension DetailView {
+    func populate(with product: Product) {
+        nameLabel.text = product.name
+        detailLabel.text = product.description
+        imageView.setImage(product.imageURL)
     }
 }

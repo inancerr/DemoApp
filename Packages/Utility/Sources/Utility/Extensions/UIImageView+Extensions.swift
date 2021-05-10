@@ -15,7 +15,9 @@ import class UIKit.UIImage
 import class UIKit.UIImageView
 
 public extension UIImageView {
-    func setImage(_ url: String) {
+    func setImage(
+        _ url: String
+    ) {
         ImageLoader.shared.loadImage(url) { [weak self] image in
             self?.image = image
         }

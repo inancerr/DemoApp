@@ -19,7 +19,7 @@ let package = Package(
             name: "Network",
             dependencies: [
                 .product(
-                    name: "UtilityDyn",
+                    name: "Utility",
                     package: "Utility"
                 )
             ]),

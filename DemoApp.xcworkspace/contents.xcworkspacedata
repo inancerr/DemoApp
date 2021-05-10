@@ -2,28 +2,20 @@
 <Workspace
    version = "1.0">
    <Group
-      location = "group:Packages"
+      location = "container:"
       name = "Packages">
-      <Group
-         location = "container:"
-         name = "Common">
-         <FileRef
-            location = "group:/Users/inanc/Projects/DemoApp/Entities">
-         </FileRef>
-         <FileRef
-            location = "group:/Users/inanc/Projects/DemoApp/Utility">
-         </FileRef>
-      </Group>
-      <Group
-         location = "container:"
-         name = "Network">
-         <FileRef
-            location = "group:/Users/inanc/Projects/DemoApp/Network">
-         </FileRef>
-         <FileRef
-            location = "group:/Users/inanc/Projects/DemoApp/ProductApi">
-         </FileRef>
-      </Group>
+      <FileRef
+         location = "group:Packages/Entities">
+      </FileRef>
+      <FileRef
+         location = "group:Packages/Network">
+      </FileRef>
+      <FileRef
+         location = "group:Packages/ProductApi">
+      </FileRef>
+      <FileRef
+         location = "group:Packages/Utility">
+      </FileRef>
    </Group>
    <FileRef
       location = "container:DemoApp.xcodeproj">

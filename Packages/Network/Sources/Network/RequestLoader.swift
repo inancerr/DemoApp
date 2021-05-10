@@ -98,3 +98,9 @@ private extension Dictionary {
         try? JSONSerialization.data(withJSONObject: self)
     }
 }
+
+// MARK: - RequestLoader
+public let requestLoader = RequestLoader(
+    baseURL: URL(string: "https://s3-eu-west-1.amazonaws.com/")!,
+    standardHeaders: [:]
+)
