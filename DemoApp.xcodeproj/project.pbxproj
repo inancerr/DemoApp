@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		0F14211D26448F210042B127 /* UtilityDyn in Frameworks */ = {isa = PBXBuildFile; productRef = 0F14211C26448F210042B127 /* UtilityDyn */; };
 		0F14211E26448F210042B127 /* UtilityDyn in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 0F14211C26448F210042B127 /* UtilityDyn */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		0F14212326448F5B0042B127 /* ApiDyn in Frameworks */ = {isa = PBXBuildFile; productRef = 0F14212226448F5B0042B127 /* ApiDyn */; };
-		0F14212426448F5B0042B127 /* ApiDyn in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 0F14212226448F5B0042B127 /* ApiDyn */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		0F31E23F26499CF900431BEA /* EntitiesDyn in Frameworks */ = {isa = PBXBuildFile; productRef = 0F31E23E26499CF900431BEA /* EntitiesDyn */; };
+		0F31E24026499CF900431BEA /* EntitiesDyn in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 0F31E23E26499CF900431BEA /* EntitiesDyn */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		0F3E212B2643217900CD0967 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3E212A2643217900CD0967 /* AppDelegate.swift */; };
 		0F3E212D2643217900CD0967 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3E212C2643217900CD0967 /* SceneDelegate.swift */; };
 		0F3E212F2643217900CD0967 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3E212E2643217900CD0967 /* ListViewController.swift */; };
@@ -52,7 +52,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				0F14211E26448F210042B127 /* UtilityDyn in Embed Frameworks */,
-				0F14212426448F5B0042B127 /* ApiDyn in Embed Frameworks */,
+				0F31E24026499CF900431BEA /* EntitiesDyn in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -88,7 +88,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0F14211D26448F210042B127 /* UtilityDyn in Frameworks */,
-				0F14212326448F5B0042B127 /* ApiDyn in Frameworks */,
+				0F31E23F26499CF900431BEA /* EntitiesDyn in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,7 +218,7 @@
 			name = DemoApp;
 			packageProductDependencies = (
 				0F14211C26448F210042B127 /* UtilityDyn */,
-				0F14212226448F5B0042B127 /* ApiDyn */,
+				0F31E23E26499CF900431BEA /* EntitiesDyn */,
 			);
 			productName = DemoApp;
 			productReference = 0F3E21272643217900CD0967 /* DemoApp.app */;
@@ -673,9 +673,9 @@
 			isa = XCSwiftPackageProductDependency;
 			productName = UtilityDyn;
 		};
-		0F14212226448F5B0042B127 /* ApiDyn */ = {
+		0F31E23E26499CF900431BEA /* EntitiesDyn */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = ApiDyn;
+			productName = EntitiesDyn;
 		};
 /* End XCSwiftPackageProductDependency section */
 

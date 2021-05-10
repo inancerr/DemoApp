@@ -7,7 +7,7 @@
 
 import struct UIKit.IndexPath
 
-import struct Api.Product
+import struct Entities.Product
 
 protocol ListViewModelOutput: class {
     func reloadList()

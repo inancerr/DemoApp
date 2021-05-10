@@ -19,7 +19,7 @@ import protocol UIKit.UICollectionViewDelegateFlowLayout
 
 import func Utility.with
 
-import struct Api.Product
+import struct Entities.Product
 
 class ListViewController: UIViewController {
 

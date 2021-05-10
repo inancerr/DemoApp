@@ -16,6 +16,7 @@ let package = Package(
             targets: ["Utility"])
     ],
     dependencies: [
+        .package(path: "../Packages/Entities"),
     ],
     targets: [
         .target(

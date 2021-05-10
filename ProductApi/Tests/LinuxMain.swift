@@ -1,7 +1,7 @@
 import XCTest
 
-import ApiTests
+import ProductApiTests
 
 var tests = [XCTestCaseEntry]()
-tests += ApiTests.allTests()
+tests += ProductApiTests.allTests()
 XCTMain(tests)

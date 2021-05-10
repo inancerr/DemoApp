@@ -17,7 +17,7 @@ import class UIKit.UILabel
 import func Utility.with
 import func Utility.vStack
 
-import struct Api.Product
+import struct Entities.Product
 
 final class ListCell: UICollectionViewCell {
     

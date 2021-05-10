@@ -4,15 +4,26 @@
    <Group
       location = "group:Packages"
       name = "Packages">
-      <FileRef
-         location = "group:Api">
-      </FileRef>
-      <FileRef
-         location = "group:Network">
-      </FileRef>
-      <FileRef
-         location = "group:Utility">
-      </FileRef>
+      <Group
+         location = "container:"
+         name = "Common">
+         <FileRef
+            location = "group:/Users/inanc/Projects/DemoApp/Entities">
+         </FileRef>
+         <FileRef
+            location = "group:/Users/inanc/Projects/DemoApp/Utility">
+         </FileRef>
+      </Group>
+      <Group
+         location = "container:"
+         name = "Network">
+         <FileRef
+            location = "group:/Users/inanc/Projects/DemoApp/Network">
+         </FileRef>
+         <FileRef
+            location = "group:/Users/inanc/Projects/DemoApp/ProductApi">
+         </FileRef>
+      </Group>
    </Group>
    <FileRef
       location = "container:DemoApp.xcodeproj">
