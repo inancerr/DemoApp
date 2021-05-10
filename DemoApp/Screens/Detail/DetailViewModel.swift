@@ -19,6 +19,7 @@ final class DetailViewModel {
     
     weak var output: DetailViewModelOutput?
     
+    // MARK: - Initialization
     init() {
         
     }

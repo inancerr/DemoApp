@@ -24,15 +24,13 @@ final class DetailView: UIView {
     }
     
     private let nameLabel = with(UILabel()) {
-        $0.font = .systemFont(ofSize: 16, weight: .bold)
-        $0.textAlignment = .center
+        $0.font = .systemFont(ofSize: 18, weight: .bold)
         $0.text = "This is title"
     }
     
-    private let priceLabel = with(UILabel()) {
-        $0.font = .systemFont(ofSize: 18, weight: .medium)
-        $0.textAlignment = .center
-        $0.text = "28$"
+    private let detailLabel = with(UILabel()) {
+        $0.font = .systemFont(ofSize: 16, weight: .medium)
+        $0.text = "This is description"
     }
 
     private lazy var stackView = vStack(
@@ -40,7 +38,7 @@ final class DetailView: UIView {
     )(
         imageView,
         nameLabel,
-        priceLabel
+        detailLabel
     )
 
     init() {
@@ -52,7 +50,7 @@ final class DetailView: UIView {
             stackView.alignLeading(to: self, offset: 5),
             stackView.alignTrailing(to: self, offset: 5),
             nameLabel.alignHeight(25),
-            priceLabel.alignHeight(25)
+            detailLabel.alignHeight(25)
         ]
         .activate()
     }

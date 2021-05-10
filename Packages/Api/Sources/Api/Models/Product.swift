@@ -6,14 +6,14 @@
 //
 
 public struct Product {
-    let product_id, name, image: String
-    let price: Int
+    public let product_id, name, image: String
+    public let price: Double
     
     public init(
         product_id: String,
         name: String,
         image: String,
-        price: Int
+        price: Double
     ) {
         self.product_id = product_id
         self.name = name
