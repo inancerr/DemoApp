@@ -1,5 +1,7 @@
 
+
 import enum Entities.APIError
+import enum Entities.NetworkError
 
 // MARK: - Error Mapping
 public func convertError(_ error: Error) -> APIError {

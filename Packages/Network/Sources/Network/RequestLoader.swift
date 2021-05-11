@@ -7,6 +7,8 @@ import struct Foundation.URLQueryItem
 import struct Foundation.Data
 import class Foundation.URLResponse
 import class Foundation.JSONSerialization
+import struct Foundation.URLError
+import enum Entities.NetworkError
 
 public struct RequestLoader {
     let baseURL: URL
@@ -85,7 +87,10 @@ private extension RequestLoader {
         response: URLResponse?,
         error: Error?
     ) throws -> Data {
-        if let error = error {
+        if let error = error as? URLError {
+            if error.code == URLError.Code.notConnectedToInternet {
+                throw NetworkError.noConnection
+            }
             throw NetworkError.url(error)
         }
         return data ?? Data()

@@ -5,6 +5,9 @@
       location = "container:"
       name = "Packages">
       <FileRef
+         location = "group:Packages/LocalStorage">
+      </FileRef>
+      <FileRef
          location = "group:Packages/Entities">
       </FileRef>
       <FileRef

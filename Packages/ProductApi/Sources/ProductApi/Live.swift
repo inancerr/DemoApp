@@ -4,9 +4,11 @@ import struct Foundation.URL
 
 import struct Network.Request
 import struct Network.RequestLoader
-import func Network.convertError
 import let Network.requestLoader
+
 import struct Entities.Product
+
+import class LocalStorage.ProductStorage
 
 // MARK: - Live
 public extension ProductAPI {
@@ -23,10 +25,15 @@ extension ProductAPI {
     ) {
         DispatchQueue.global().async {
             requestLoader.load(request: .productListRequest) { result in
+                let storage = ProductStorage()
                 completion(
                     result
                         .map { $0.products }
-                        .mapError(convertError)
+                        .map(storage.save)
+                        .onNetworkError {
+                            let productList = storage.fetchProducts()
+                            return .success(productList)
+                        }
                 )
             }
         }
@@ -42,12 +49,15 @@ extension ProductAPI {
                     .init(productID: productID)
                 )
             ) { result in
-                DispatchQueue.main.async {
-                    completion(
-                        result
-                            .mapError(convertError)
-                    )
-                }
+                let storage = ProductStorage()
+                completion(
+                    result
+                        .map(storage.updateProductDetail)
+                        .onNetworkError {
+                            let product = storage.fetchProduct(productID)
+                            return .success(product)
+                        }
+                )
             }
         }
     }

@@ -13,7 +13,9 @@ let package = Package(
     ],
     dependencies: [
         .package(path: "../Packages/Entities"),
-        .package(path: "../Packages/Network")
+        .package(path: "../Packages/Network"),
+        .package(path: "../Packages/LocalStorage"),
+        .package(path: "../Packages/Utility")
     ],
     targets: [
         .target(
@@ -26,6 +28,14 @@ let package = Package(
                 .product(
                     name: "Network",
                     package: "Network"
+                ),
+                .product(
+                    name: "LocalStorage",
+                    package: "LocalStorage"
+                ),
+                .product(
+                    name: "Utility",
+                    package: "Utility"
                 )
             ]),
         .testTarget(

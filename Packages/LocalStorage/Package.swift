@@ -4,31 +4,28 @@
 import PackageDescription
 
 let package = Package(
-    name: "Utility",
+    name: "LocalStorage",
     platforms: [.iOS(.v14)],
     products: [
         .library(
-            name: "Utility",
-            targets: ["Utility"]),
-        .library(
-            name: "UtilityDyn",
-            type: .dynamic,
-            targets: ["Utility"])
+            name: "LocalStorage",
+            targets: ["LocalStorage"]),
     ],
     dependencies: [
-        .package(path: "../Packages/Entities")
+        .package(path: "../Packages/Entities"),
     ],
     targets: [
         .target(
-            name: "Utility",
+            name: "LocalStorage",
             dependencies: [
                 .product(
                     name: "EntitiesDyn",
                     package: "Entities"
                 )
-            ]),
+            ]
+        ),
         .testTarget(
-            name: "UtilityTests",
-            dependencies: ["Utility"]),
+            name: "LocalStorageTests",
+            dependencies: ["LocalStorage"]),
     ]
 )
