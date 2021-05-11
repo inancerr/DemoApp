@@ -1,4 +1,5 @@
 
+import class Foundation.URLSessionConfiguration
 import class Foundation.URLSession
 import struct Foundation.URLRequest
 import struct Foundation.URL
@@ -30,7 +31,12 @@ public extension RequestLoader {
         completion: @escaping (Result<Response, Error>) -> ()
     ) {
         let urlRequest = createUrlRequest(from: request)
-        let task = URLSession.shared.dataTask(with: urlRequest) { (data, response, error) in
+        let config = URLSessionConfiguration.default
+        config.requestCachePolicy = .reloadIgnoringLocalCacheData
+        config.urlCache = nil
+
+        let session = URLSession(configuration: config)
+        let task = session.dataTask(with: urlRequest) { (data, response, error) in
             do {
                 let data = try self.handleResponse(
                     data: data,

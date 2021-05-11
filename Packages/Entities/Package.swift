@@ -9,13 +9,7 @@ let package = Package(
     products: [
         .library(
             name: "Entities",
-            targets: ["Entities"]),
-        .library(
-            name: "EntitiesDyn",
-            type: .dynamic,
             targets: ["Entities"])
-    ],
-    dependencies: [
     ],
     targets: [
         .target(

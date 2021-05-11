@@ -22,7 +22,7 @@ let package = Package(
             name: "ProductApi",
             dependencies: [
                 .product(
-                    name: "EntitiesDyn",
+                    name: "Entities",
                     package: "Entities"
                 ),
                 .product(

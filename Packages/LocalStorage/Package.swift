@@ -19,7 +19,7 @@ let package = Package(
             name: "LocalStorage",
             dependencies: [
                 .product(
-                    name: "EntitiesDyn",
+                    name: "Entities",
                     package: "Entities"
                 )
             ]

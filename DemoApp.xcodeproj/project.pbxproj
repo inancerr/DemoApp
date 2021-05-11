@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		0F29F60A2649CC0D004320CD /* ProductApi in Frameworks */ = {isa = PBXBuildFile; productRef = 0F29F6092649CC0D004320CD /* ProductApi */; };
-		0F29F61A2649CCD6004320CD /* EntitiesDyn in Frameworks */ = {isa = PBXBuildFile; productRef = 0F29F6192649CCD6004320CD /* EntitiesDyn */; };
-		0F29F61B2649CCD6004320CD /* EntitiesDyn in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 0F29F6192649CCD6004320CD /* EntitiesDyn */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		0F3E212B2643217900CD0967 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3E212A2643217900CD0967 /* AppDelegate.swift */; };
 		0F3E212D2643217900CD0967 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3E212C2643217900CD0967 /* SceneDelegate.swift */; };
 		0F3E212F2643217900CD0967 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3E212E2643217900CD0967 /* ListViewController.swift */; };
@@ -49,7 +47,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				0F29F61B2649CCD6004320CD /* EntitiesDyn in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -84,7 +81,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0F29F60A2649CC0D004320CD /* ProductApi in Frameworks */,
-				0F29F61A2649CCD6004320CD /* EntitiesDyn in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -213,7 +209,6 @@
 			name = DemoApp;
 			packageProductDependencies = (
 				0F29F6092649CC0D004320CD /* ProductApi */,
-				0F29F6192649CCD6004320CD /* EntitiesDyn */,
 			);
 			productName = DemoApp;
 			productReference = 0F3E21272643217900CD0967 /* DemoApp.app */;
@@ -505,13 +500,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = QFXLM2UG4Z;
+				DEVELOPMENT_TEAM = KH54L76275;
 				INFOPLIST_FILE = DemoApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.inanc.DemoApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alberun.DemoApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -524,13 +519,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = QFXLM2UG4Z;
+				DEVELOPMENT_TEAM = KH54L76275;
 				INFOPLIST_FILE = DemoApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.inanc.DemoApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alberun.DemoApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -666,10 +661,6 @@
 		0F29F6092649CC0D004320CD /* ProductApi */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = ProductApi;
-		};
-		0F29F6192649CCD6004320CD /* EntitiesDyn */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = EntitiesDyn;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -58,6 +58,11 @@ extension CoreDataManager {
         let fetchRequest: NSFetchRequest<NSFetchRequestResult> = NSFetchRequest(entityName: String(describing: T.self))
         fetchRequest.predicate = predicate
         fetchRequest.sortDescriptors = sortDescriptor
+        do {
+            try context.fetch(fetchRequest)
+        } catch let err {
+            print(err)
+        }
         guard let result = try context.fetch(fetchRequest) as? [T] else {
             throw LocalStorageError.noData
         }
