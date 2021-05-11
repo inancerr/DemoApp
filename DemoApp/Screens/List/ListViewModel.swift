@@ -42,7 +42,7 @@ extension ListViewModel {
                     self?.output?.reloadList()
                 }
             case .failure(let err):
-                print(err)
+                print(err) // Show Error Message
             }
         }
     }

@@ -24,7 +24,9 @@ extension ProductAPI {
         _ completion: @escaping Completion<[Product]>
     ) {
         DispatchQueue.global().async {
-            requestLoader.load(request: .productListRequest) { result in
+            requestLoader.load(
+                request: .productListRequest
+            ) { result in
                 let storage = ProductStorage()
                 completion(
                     result

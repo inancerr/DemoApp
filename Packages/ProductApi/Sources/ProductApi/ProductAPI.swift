@@ -9,8 +9,8 @@ public struct ProductAPI {
     public var productDetail: (String, @escaping Completion<Product>) -> Void
 
     public init(
-        productList: @escaping (@escaping Completion<[Product]>) -> Void,
-        productDetail: @escaping (String, @escaping Completion<Product>) -> Void
+        productList: @escaping (@escaping Completion<[Product]>) -> Void  = { _ in },
+        productDetail: @escaping (String, @escaping Completion<Product>) -> Void = { _,_  in }
     ) {
         self.productList = productList
         self.productDetail = productDetail

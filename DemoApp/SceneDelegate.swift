@@ -12,6 +12,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
+        
+        #if DEBUG
+        // Short-circuit starting app if running unit tests
+        guard ProcessInfo.processInfo.environment["XCTestConfigurationFilePath"] == nil else {
+          return
+        }
+        #endif
+        
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
         window?.makeKeyAndVisible()
